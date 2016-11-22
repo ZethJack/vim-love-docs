@@ -9,7 +9,7 @@ syntax match lovetype "[\:\.]\%(\%(clear\|demand\|getCount\|peek\|performAtomic\
 syntax match lovecallback "\<love\.\%(\%(directorydropped\|draw\|errhand\|filedropped\|focus\|gamepadaxis\|gamepadpressed\|gamepadreleased\|joystickadded\|joystickaxis\|joystickhat\|joystickpressed\|joystickreleased\|joystickremoved\|keypressed\|keyreleased\|load\|lowmemory\|mousefocus\|mousemoved\|mousepressed\|mousereleased\|quit\|resize\|run\|textedited\|textinput\|threaderror\|touchmoved\|touchpressed\|touchreleased\|update\|visible\|wheelmoved\)\)\>"
 syntax match lovecallback "\<love\.\%(\%(getVersion\|conf\)\)\>"
 syntax region loveconfregion start="\<love\.conf\>" end="\<end\>"me=e-3,he=e-3,re=e-3 skipwhite skipempty contains=ALL
-execute( "highlight lovefunction " . g:lovedocs_colors )
-execute( "highlight lovetype " . g:lovedocs_colors )
-execute( "highlight lovecallback " . g:lovedocs_colors )
-execute( "highlight loveconf " . g:lovedocs_colors )
+hi link lovefunction FUNCTION
+hi link lovetype TYPE
+hi link lovecallback FUNCTION
+hi link loveconf FUNCTION
